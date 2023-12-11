@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-8 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="tipo">Tipo</label>
+                    <input type="text" class="form-control" id="tipo" 
+                    style="background-color:#E0FFFF" placeholder="Tipo de receta" name="tipo" [(ngModel)]="tipo" required>
+                </div>
+                <div class="form-group">
+                    <label for="autor">Autor</label>
+                    <input type="text" class="form-control" id="autor"
+                    style="background-color:#E0FFFF" placeholder="Autor de la receta"name="autor" [(ngModel)]="autor" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" 
+                    style="background-color:#E0FFFF" placeholder="Nombre de la receta"name="nombre" [(ngModel)]="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="ingredientes">Ingredientes</label>
+                    <textarea class="form-control" rows="3"  id="ingredientes" 
+                    style="background-color:#E0FFFF" placeholder="Ingredientes" name="ingredientes" [(ngModel)]="ingredientes" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="procedimiento">Procedimiento</label>
+                    <textarea class="form-control" rows="5" id="procedimiento" 
+                    style="background-color:#E0FFFF" placeholder="Procedimiento" name="procedimiento" [(ngModel)]="procedimiento" required></textarea>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-outline-success" [disabled]="!f.valid">Crear Receta</button>              
+            </form>
+        </div>
+    </div>
+</div>

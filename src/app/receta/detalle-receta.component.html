@@ -1,0 +1,22 @@
+<div class="row mt-5" class="bg-success p-2 text-dark bg-opacity-25" *ngIf="receta">
+    <div class="col-md-6 mx-auto">
+        <div class="card" style="width: 45rem;">
+            <div class="card-header">
+                <h3><b>{{receta.nombre}}</b></h3> <h6>de {{receta.autor}}</h6>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b>ID: </b>{{receta.id}}</li>
+              <li class="list-group-item"><b>Tipo: </b>{{receta.tipo}}</li>
+              <li class="list-group-item"><b>Autor: </b>{{receta.autor}}</li>
+              <li class="list-group-item"><b>Nombre: </b>{{receta.nombre}}</li>
+              <li class="list-group-item"><b>Ingredientes: </b>{{receta.ingredientes}}</li>
+              <li class="list-group-item"><b>Procedimiento: </b>{{receta.procedimiento}}</li>
+            </ul>
+            <div class="card-footer">
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fa-solid fa-circle-arrow-left"></i> Volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

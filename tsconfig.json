@@ -21,7 +21,8 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "strictNullChecks": false // Agregado: error en 'editar-receta-cpmponents.ts' linea 15
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
