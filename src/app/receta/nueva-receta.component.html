@@ -18,6 +18,11 @@
                     style="background-color:#E0FFFF" placeholder="Nombre de la receta"name="nombre" [(ngModel)]="nombre" required>
                 </div>
                 <div class="form-group">
+                    <label for="rendimiento">Rendimiento</label>
+                    <input type="text" class="form-control" id="rendimiento" 
+                    style="background-color:#E0FFFF" placeholder="Rendimiento - Porciones"name="rendimiento" [(ngModel)]="rendimiento" required>
+                </div>
+                <div class="form-group">
                     <label for="ingredientes">Ingredientes</label>
                     <textarea class="form-control" rows="3"  id="ingredientes" 
                     style="background-color:#E0FFFF" placeholder="Ingredientes" name="ingredientes" [(ngModel)]="ingredientes" required></textarea>
@@ -26,6 +31,11 @@
                     <label for="procedimiento">Procedimiento</label>
                     <textarea class="form-control" rows="5" id="procedimiento" 
                     style="background-color:#E0FFFF" placeholder="Procedimiento" name="procedimiento" [(ngModel)]="procedimiento" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="consejo">Consejos</label>
+                    <textarea class="form-control" rows="2" id="consejo" 
+                    style="background-color:#E0FFFF" placeholder="Consejos - Tips" name="consejo" [(ngModel)]="consejo" required></textarea>
                 </div>
                 <br>
                 <button type="submit" class="btn btn-outline-success" [disabled]="!f.valid">Crear Receta</button>              

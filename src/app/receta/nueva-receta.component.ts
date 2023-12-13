@@ -14,8 +14,10 @@ export class NuevaRecetaComponent implements OnInit {
   tipo: string = '';
   autor: string = '';
   nombre: string = '';
+  rendimiento: string = '';
   ingredientes: string = '';  
   procedimiento: string = '';
+  consejo: string = '';
 
   constructor(
     private recetaService: RecetaService,
@@ -28,7 +30,10 @@ export class NuevaRecetaComponent implements OnInit {
 
   onCreate(): void {
     //console.log('Iniciando onCreate()...');
-    const receta = new Receta(this.tipo, this.autor, this.nombre, this.ingredientes, this.procedimiento);
+    const receta = new Receta(
+      this.tipo, this.autor, this.nombre, this.rendimiento,
+      this.ingredientes, this.procedimiento, this.consejo
+      );
     //console.log('Receta creada:', receta);
     this.recetaService.save(receta).subscribe({
         next: data => {

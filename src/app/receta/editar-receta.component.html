@@ -18,6 +18,11 @@
                     name="nombre" [(ngModel)]="receta.nombre" required>
                 </div>
                 <div class="form-group">
+                    <label for="rendimiento">Rendimiento</label>
+                    <input type="text" class="form-control" id="rendimiento" style="background-color:#F0FFFF"
+                    name="rendimiento" [(ngModel)]="receta.rendimiento" required>
+                </div>
+                <div class="form-group">
                     <label for="ingredientes">Ingredientes</label>
                     <textarea class="form-control" rows="3"  id="ingredientes" style="background-color:#F0FFFF"
                     name="ingredientes" [(ngModel)]="receta.ingredientes" required></textarea>
@@ -26,6 +31,11 @@
                     <label for="procedimiento">Procedimiento</label>
                     <textarea class="form-control" rows="5" id="procedimiento" style="background-color:#F0FFFF"
                     name="procedimiento" [(ngModel)]="receta.procedimiento" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="consejo">Consejo</label>
+                    <input type="text" class="form-control" id="consejo" style="background-color:#F0FFFF"
+                    name="consejo" [(ngModel)]="receta.consejo" required>
                 </div>
                 <br>
                 <button type="submit" class="btn btn-outline-success" [disabled]="!f.valid">Actualizar Receta</button>              
