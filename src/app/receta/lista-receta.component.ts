@@ -18,6 +18,8 @@ export class ListaRecetaComponent implements OnInit {
     private toastr: ToastrService,
     ) { }
 
+  filterReceta = '';
+
   ngOnInit(): void {
     this.cargarRecetas();
   }

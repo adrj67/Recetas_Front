@@ -33,7 +33,10 @@ export class DetalleRecetaComponent implements OnInit {
       }
     });
   }
-
+/**
+ * https://www.discoduroderoer.es/como-crear-un-pdf-en-angular-con-pdfmake/
+ * para crear PDF
+ */
   volver(): void {
     this.router.navigate(['/']);
   }

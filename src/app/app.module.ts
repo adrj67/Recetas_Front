@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 // external
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { FilterPipe } from './receta/filter.pipe';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ToastrModule } from 'ngx-toastr';
     ListaRecetaComponent,
     DetalleRecetaComponent,
     NuevaRecetaComponent,
-    EditarRecetaComponent
+    EditarRecetaComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
