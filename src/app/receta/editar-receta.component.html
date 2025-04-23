@@ -20,7 +20,7 @@
                 <div class="form-group">
                     <label for="rendimiento">Rendimiento</label>
                     <input type="text" class="form-control" id="rendimiento" style="background-color:#F0FFFF"
-                    name="rendimiento" [(ngModel)]="receta.rendimiento" required>
+                    name="rendimiento" [(ngModel)]="receta.rendimiento">
                 </div>
                 <div class="form-group">
                     <label for="ingredientes">Ingredientes</label>
@@ -35,7 +35,7 @@
                 <div class="form-group">
                     <label for="consejo">Consejo</label>
                     <input type="text" class="form-control" id="consejo" style="background-color:#F0FFFF"
-                    name="consejo" [(ngModel)]="receta.consejo" required>
+                    name="consejo" [(ngModel)]="receta.consejo">
                 </div>
                 <br>
                 <button type="submit" class="btn btn-outline-success" [disabled]="!f.valid">Actualizar Receta</button>              

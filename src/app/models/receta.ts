@@ -1,13 +1,13 @@
 export class Receta {
 
-id?: number;
-tipo: string;
-autor: string;
-nombre: string;
-rendimiento: string;
-ingredientes: string;
-procedimiento: string;
-consejo: string;
+    id?: number;
+    tipo: string;
+    autor: string;
+    nombre: string;
+    rendimiento: string;
+    ingredientes: string;
+    procedimiento: string;
+    consejo: string;
 
 constructor(
     tipo: string, autor: string, nombre: string, rendimiento: string,

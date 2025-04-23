@@ -16,7 +16,11 @@
             </ul>
             <div class="card-footer">
                 <div class="d-grid gap-2 col-6 mx-auto"> 
-                    <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fa-solid fa-circle-arrow-left"></i> Volver</button>
+                    <button class="btn btn-outline-primary btn-block d-print-none" (click)="volver()"><i class="fa-solid fa-circle-arrow-left"></i> Volver</button>
+                    <div class="btn-group" role="group" aria-label="Botones">
+                        <button class="btn btn-outline-danger btn-block btn-sm mx-1 d-print-none" onclick="javascript:window.print()">Imprimir PDF</button>
+                        <button class="btn btn-outline-success btn-block btn-sm d-print-none" (click)="exportarExcel()">Exportar a Excel</button>
+                    </div>
                 </div>
             </div>
         </div>

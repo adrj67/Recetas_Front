@@ -7,6 +7,7 @@ import { ListaRecetaComponent } from './receta/lista-receta.component';
 import { DetalleRecetaComponent } from './receta/detalle-receta.component';
 import { NuevaRecetaComponent } from './receta/nueva-receta.component';
 import { EditarRecetaComponent } from './receta/editar-receta.component';
+import { CostoComponent } from './costos/costo/costo.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { FilterPipe } from './receta/filter.pipe';
+import { HomeComponent } from './home/home/home.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { FilterPipe } from './receta/filter.pipe';
     NuevaRecetaComponent,
     EditarRecetaComponent,
     FilterPipe,
+    CostoComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

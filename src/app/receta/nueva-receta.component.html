@@ -20,7 +20,7 @@
                 <div class="form-group">
                     <label for="rendimiento">Rendimiento</label>
                     <input type="text" class="form-control" id="rendimiento" 
-                    style="background-color:#E0FFFF" placeholder="Rendimiento - Porciones"name="rendimiento" [(ngModel)]="rendimiento" required>
+                    style="background-color:#E0FFFF" placeholder="Rendimiento - Porciones"name="rendimiento" [(ngModel)]="rendimiento">
                 </div>
                 <div class="form-group">
                     <label for="ingredientes">Ingredientes</label>
@@ -35,10 +35,10 @@
                 <div class="form-group">
                     <label for="consejo">Consejos</label>
                     <textarea class="form-control" rows="2" id="consejo" 
-                    style="background-color:#E0FFFF" placeholder="Consejos - Tips" name="consejo" [(ngModel)]="consejo" required></textarea>
+                    style="background-color:#E0FFFF" placeholder="Consejos - Tips" name="consejo" [(ngModel)]="consejo"></textarea>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-outline-success" [disabled]="!f.valid">Crear Receta</button>              
+                <button type="submit" class="btn btn-success" [disabled]="!f.valid">Crear Receta</button>              
             </form>
         </div>
     </div>

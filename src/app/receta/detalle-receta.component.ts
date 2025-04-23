@@ -3,6 +3,7 @@ import { RecetaService } from '../service/receta.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Receta } from '../models/receta';
+import * as XLSX from 'xlsx';
 
 @Component({
   selector: 'app-detalle-receta',
@@ -33,10 +34,24 @@ export class DetalleRecetaComponent implements OnInit {
       }
     });
   }
-/**
- * https://www.discoduroderoer.es/como-crear-un-pdf-en-angular-con-pdfmake/
- * para crear PDF
- */
+
+  exportarExcel(): void {
+    if (this.receta) {
+      // Crear una hoja de trabajo de Excel
+      const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet([this.receta]); // Convertir la receta en un array de un elemento
+
+      // Crear un libro de Excel
+      const wb: XLSX.WorkBook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Datos');
+
+      // Guardar el libro como archivo Excel
+      const nombreArchivo = this.receta.nombre.replace(/[^a-zA-Z0-9]/g, '_'); // Eliminar caracteres especiales
+      XLSX.writeFile(wb, `${nombreArchivo}.xlsx`);
+    } else {
+      console.error('No hay datos de receta para exportar a Excel.');
+    }
+  }
+  
   volver(): void {
     this.router.navigate(['/']);
   }

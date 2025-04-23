@@ -1,0 +1,98 @@
+<body>
+    <br>
+        <div class="row g-3">           
+                <div class="col form-floating">                    
+                    <input class="form-control" type="text" name="ingrediente" placeholder="Ingrediente" id="ing1" [(ngModel)]="costo.ingrediente">
+                    <label for="ing1">Ingrediente</label>
+                </div>
+           
+                <div class="col input-group">
+                    <span class="input-group-text">$</span>
+                    <div class="form-floating">
+                        <input class="form-control" type="number" name="precioUnidad" placeholder="Precio Unidad" id="preUni1" [(ngModel)]="costo.precioUnidad">
+                        <label for="preUni1">Precio por unidad</label>
+                    </div>
+                </div>
+                <!--
+                <div class="col form-floating">
+                    <input class="form-control" type="text" name="unidad" placeholder="Unidad" id="uni1" [(ngModel)]="costo.unidad">
+                    <label for="uni1">Unidad</label>
+                </div>
+                -->
+                <div class="col form-floating">
+                    <input class="form-control" type="number" name="cantidad" placeholder="Cantidad" id="cant1" [(ngModel)]="costo.cantidad">
+                    <label for="cant1">Cantidad</label>
+                </div>
+                <!--
+                <div class="col input-group">
+                    <span class="input-group-text">$</span>
+                    <div class="col form-floating">
+                        <input class="form-control" type="number"name="precioCantidad"  placeholder="Precio Cantidad" id="preCant1" [(ngModel)]="costo.precioCantidad" value={{costo.precioCantidad}}>
+                        <label for="preCant1">Precio por cantidad</label>
+                    </div>
+                </div>
+                -->
+            <div class="col">
+                <button class="btn btn-primary btn-lg" (click)="calcular()">Agregar y Calcular</button>
+            </div>
+        
+        </div>
+        
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Ingrediente</th>
+                    <th scope="col">Precio por Unidad</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Precio por Cantidad</th>
+                    <th scope="col">Borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let costo of listaCosto; let i = index">
+                <tr>
+                    <td>{{i+1}}</td>
+                    <td>{{costo.ingrediente}}</td>
+                    <td>{{costo.precioUnidad | currency:'$' }}</td>
+                    <td>{{costo.cantidad}}</td>
+                    <td>{{costo.precioCantidad | currency:'$' }}</td>
+                    <td><button type="button" class="btn btn-danger" (click)="borrarIngrediente(i)"><i class="fa-solid fa-trash"></i> Eliminar</button></td>
+                </tr>
+                <!--<tr>
+                    <td colspan="4">Total:</td>
+                    <td>{{ sumarPrecioCantidad() | currency:'$' }}</td>
+                </tr>-->
+                </ng-container>
+            </tbody>
+        </table>
+        <div class="conteiner">
+            <div class="row justify-content-center">    
+                <div class="col-4" >
+                    <h1>Total: {{ sumarPrecioCantidad() | currency:'$' }}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-1">    
+                                
+                <input class="form-control" type="text" name="porciones" placeholder="Porciones" id="porcion" [(ngModel)]="porciones">
+                <label for="porcion">Porciones</label>
+            </div>
+            <div class="col-4" >
+                <h3>Total por porcion: {{ sumarPrecioCantidad()/porciones | currency:'$' }}</h3>
+            </div>
+        </div>
+        <br>
+        <div class="card-footer">
+            <div class="d-grid gap-2 col-2 mx-auto"> 
+                <button class="btn btn-outline-primary btn-block d-print-none" (click)="volver()"><i class="fa-solid fa-circle-arrow-left"></i> Volver al listado</button>
+                <div class="btn-group" role="group" aria-label="Botones">
+                    <button class="btn btn-outline-danger btn-block btn-sm mx-1 d-print-none" onclick="javascript:window.print()">Imprimir PDF</button>
+                </div>
+            </div>
+        </div>
+
+</body>
+<!-- https://www.youtube.com/watch?v=nN-HNeki9RM MINUTO 11-->
+<!-- https://getbootstrap.com/docs/4.1/components/input-group/ -->
