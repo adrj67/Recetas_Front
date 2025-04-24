@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { FilterPipe } from './receta/filter.pipe';
 import { HomeComponent } from './home/home/home.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { HomeComponent } from './home/home/home.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
+    RouterModule,
     FormsModule
   ],
   providers: [],
